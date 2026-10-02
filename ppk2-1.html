@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Нарезка — ППК2_1</title>
+<style>
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e0dedb;--bg:#fbfaf8;--card:#fff;--acc:#8B2942;--ok:#3f7d5a;--warn:#a8621b}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif;padding:24px 16px 80px}
+.wrap{max-width:820px;margin:0 auto}
+h1{font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.summary{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:4px;padding:14px 18px;margin-bottom:14px}
+.summary table{border-collapse:collapse;width:100%;font-size:.88rem}
+.summary td{padding:3px 0;vertical-align:top}
+.summary td:first-child{color:var(--muted);width:38%;padding-right:12px}
+.note{background:#fff8ef;border:1px solid #f0dcc0;border-radius:4px;padding:12px 16px;font-size:.88rem;margin-bottom:26px}
+.note b{color:var(--warn)}
+section{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px;margin-bottom:16px}
+section.done{opacity:.5}
+.head{display:flex;align-items:flex-start;gap:10px;margin-bottom:14px}
+.num{font:700 1.05rem/1.3 "Segoe UI",sans-serif;color:var(--acc);white-space:nowrap}
+.name{font-weight:600;font-size:1.05rem;flex:1}
+.btn{border:1px solid var(--line);background:#fff;border-radius:4px;padding:4px 10px;font-size:.78rem;cursor:pointer;color:var(--muted);white-space:nowrap}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.chk{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.lbl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 5px;font-weight:600}
+.tc{font-family:"Cascadia Mono",Consolas,monospace;font-size:1rem;background:#f3f1ee;padding:2px 7px;border-radius:3px}
+.q{font-family:"Cascadia Mono",Consolas,monospace;font-size:.95rem;background:#f6f4f1;border-left:2px solid var(--ok);padding:9px 13px;border-radius:0 3px 3px 0;white-space:pre-wrap}
+ul{margin:0;padding-left:0;list-style:none}
+li{padding-left:16px;position:relative;margin-bottom:5px;font-family:"Cascadia Mono",Consolas,monospace;font-size:.9rem}
+li:before{content:"—";position:absolute;left:0;color:var(--muted)}
+.plain{font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:99px;background:#f3e7ea;color:var(--acc)}
+.reserve section{background:#faf9f7;border-style:dashed}
+h2{font-size:1.1rem;margin:34px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+@media print{.btn,.chk{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Нарезка: ППК2_1</h1>
+<div class="sub">Лекция 2 часа 5 минут · разобрано 14 сентября 2026</div>
+
+<div class="summary">
+<table>
+<tr><td>Источник</td><td>ППК2_1, запись 02:04:50</td></tr>
+<tr><td>Таймкоды</td><td><b>точные</b> — субтитры Kinescope, не оценка</td></tr>
+<tr><td>Отсечено</td><td>продающая часть ~22 мин · организационная ~7 мин · обещания дохода и истории студентов ~11 мин</td></tr>
+<tr><td>Рассмотрено кусков</td><td>20</td></tr>
+<tr><td>Годных</td><td>13 · в резерве 2 · отклонено 5</td></tr>
+<tr><td>Первыми в работу</td><td>№1, №2, №3, №4</td></tr>
+</table>
+</div>
+
+<div class="note">
+<b>Как пользоваться.</b> Ищи фрагмент в записи по первой фразе — она приведена дословно, копируется кнопкой. Таймкоды точные, можно идти сразу на них. Что вырезать внутри — списком, тоже дословно. Отмечай галочкой сделанное, отметки сохранятся.
+</div>
+
+<section id="f1">
+<div class="head"><span class="num">№1</span><span class="name">Два психолога: кого выберет клиент</span>
+<button class="btn" onclick="cp(1)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(1,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:19:07</span> · конец <span class="tc">00:21:07</span> · после чистки примерно 70 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">давайте представим, женщина, у нее тревожность, или она сейчас переживает плохие отношения с мужчиной. И она думает, сходите ко мне к психологу</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">большинству людей такие слова непонятны</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Я сейчас не идеально описал»</li>
+<li>«Вот как вам откликается? Первый или второй? Или второй?»</li>
+<li>«Вот вы увидели, какой ответ? Двойка была больше ответов. Понятно, что были единички, но двоек больше»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «К кому она пойдёт?» — держать 2 секунды.</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Клиент выбирает того, чьи слова понимает, а не того, у кого больше регалий.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f2">
+<div class="head"><span class="num">№2</span><span class="name">Девяносто девять процентов</span>
+<button class="btn" onclick="cp(2)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(2,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:40:45</span> · конец <span class="tc">00:41:49</span> · после чистки примерно 50 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">99 % людей никогда в жизни не были у психологов</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Потому что вы будете говорить с ними на их языке</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«И запишите инсайт, запомните сейчас мои слова»</li>
+<li>«Знаете, что вы будете слышать? Знаете, что вы будете слышать?» — оставить один раз</li>
+<li>«ты знаешь Маш, ты знаешь Серёж, ты знаешь Свет» — перечисление имён</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «99% никогда не были у психолога» — держать 2 секунды.</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Почти каждый первый клиент приходит к психологу впервые в жизни.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f3">
+<div class="head"><span class="num">№3</span><span class="name">Всего двадцать клиентов</span>
+<button class="btn" onclick="cp(3)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(3,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:14:15</span> · конец <span class="tc">00:15:30</span> · после чистки примерно 55 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Это же надо, наверное, миллиард подписчиков, 100 тысяч подписчиков, десятки тысяч подписчиков, и только тогда будут клиенты</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Это не быть популярным психологом</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«а у меня же 3 ,5 подписчика, и то мама, собака и бывший, и еще бывший бывшего с анонимного аккаунта»</li>
+<li>«Скажите, а это сложно?»</li>
+<li>«Слышите?»</li>
+<li><b>Обязательно вырезать:</b> «Вы больше никогда не будете нуждаться в деньгах» — обещание дохода, в публикацию не идёт</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Сколько нужно подписчиков?» · в конце: «Двадцать»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Чтобы начать практику, не нужна большая аудитория — нужно двадцать постоянных клиентов.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f4">
+<div class="head"><span class="num">№4</span><span class="name">Клиент, который разбирается, и клиент, который нет</span>
+<button class="btn" onclick="cp(4)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(4,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:36:30</span> · конец <span class="tc">00:38:15</span> · после чистки примерно 60 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">вы же знаете, что есть клиент, кто приходит и говорит, ну сделайте мне маникюр, ну что-то там на голове мне сделайте</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">95 % это люди-обыватели</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Есть у нас, кстати, парикмахеры или стилисты, или маникюр кто делает, педикюр. Есть у нас со сферы красоты девушки»</li>
+<li>«Кстати, у нас там немалая часть студентов, которые переходят в профессию психолога именно из этой профессии»</li>
+<li>«У него с красными ушами сидит, выслушивает нытье этих девочек»</li>
+<li>«Вот кто понимает, о чем я, поставьте, пожалуйста, плюсики в комментариях»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Кто на самом деле ваш клиент»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Только пять человек из ста разбираются в теме — остальные девяносто пять выбирают по-другому.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f5">
+<div class="head"><span class="num">№5</span><span class="name">Две компании и пластиковые окна</span>
+<button class="btn" onclick="cp(5)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(5,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:59:00</span> · конец <span class="tc">01:00:57</span> · после чистки примерно 65 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Представьте, две компании, которые продают пластиковые окна</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Потому что в лоб ничего не продается</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>Всю линию про бывшего в будке — «Ваш бывший говорит, ну я живу в будке», «Бывшая меня тут поселила, рядом с собакой», «Я думаю, бывшая ваша не будет злиться. Она вас не побьет палкой». Шутка длинная, съедает половину фрагмента</li>
+<li>«Бедные бывшие заикаются»</li>
+<li>«Напишите в комментариях цифру. Первая или вторая?»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо. После чистки шуток фрагмент сложится плотно.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Почему в лоб не продаётся»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Кто сразу называет цену — теряет клиента. Кто сначала выясняет задачу — получает его.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f6">
+<div class="head"><span class="num">№6</span><span class="name">Психологи Nokia и психологи iPhone</span>
+<button class="btn" onclick="cp(6)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(6,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:29:30</span> · конец <span class="tc">00:29:55</span> · после чистки примерно 25 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Есть старая школа и новая школа</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Есть психологи Nokia и психологи iPhone</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Вот сейчас готовьтесь к инсайту»</li>
+<li>«Пробывшего не отпускают, я понял» — реплика из чата, к делу не относится</li>
+<li>«Вот психологов iPhone это мы выпускаем в нашем институте» — продающая вставка</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В конце: «Nokia или iPhone»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Психологи делятся на два типа так же, как телефоны до и после смартфонов.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f7">
+<div class="head"><span class="num">№7</span><span class="name">Пять образований и ни одного клиента</span>
+<button class="btn" onclick="cp(7)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(7,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:30:05</span> · конец <span class="tc">00:31:07</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">у кого есть знакомые, которые уже позаканчивали кучу обучений, у них уже 5 высших образований, но они так и не начали</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">это иллюзия, дорогие мои</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Я сначала в 150 лет буду учиться. 150 лет повышать квалификацию»</li>
+<li>«Они думают, так, сейчас я сфотографируюсь с дипломами на заднем фоне» — повтор той же мысли</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Учится 10 лет и не начинает»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Бесконечная учёба часто не подготовка, а способ не начинать.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f8">
+<div class="head"><span class="num">№8</span><span class="name">Мы судим по себе</span>
+<button class="btn" onclick="cp(8)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(8,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:46:33</span> · конец <span class="tc">00:47:20</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Вот помните, я помню родители, когда говорили, там что-то обсуждали они и думают, ну какой идиот купил эту машину?</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">А при чем тут я и другие люди?</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Вот кто от родителей подобное слышал? Да?»</li>
+<li>«Понимаете?» — повторяется трижды, оставить один раз</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Ну какой идиот такое купит»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Мы решаем за других, исходя из своей жизни, и почти всегда ошибаемся.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f9">
+<div class="head"><span class="num">№9</span><span class="name">Ваша рана — чужое лекарство</span>
+<button class="btn" onclick="cp(9)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(9,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">01:14:18</span> · конец <span class="tc">01:15:10</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Ваша шрама – это большое лекарство для людей с такими же ранами</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">помогайте таким же куче людей, которые страдают</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«выступает чуть ли там на мировых конференциях»</li>
+<li>«блин» — дважды, убрать оба</li>
+<li>«за которой вам люди будут нести деньги» — обещание дохода, в публикацию не идёт</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «То, с чем вы справились сами»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Тема, которую человек прожил сам, часто становится его сильнейшей специализацией.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f10">
+<div class="head"><span class="num">№10</span><span class="name">Быстрее нырнуть в холодную воду</span>
+<button class="btn" onclick="cp(10)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(10,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:32:00</span> · конец <span class="tc">00:32:33</span> · после чистки примерно 30 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">У вас отключали горячую воду когда-нибудь?</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">чем быстрее вы нырнете в эту воду</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Вот знаете, такая метафора»</li>
+<li>«Или вы купались в детстве на озере, и когда была холодная вода, некомфортная» — второй пример дублирует первый</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Как быстрее привыкнуть к холодной воде»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Начинать страшно ровно до того момента, пока не начал.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f11">
+<div class="head"><span class="num">№11</span><span class="name">Вам не нужен сайт</span>
+<button class="btn" onclick="cp(11)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(11,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:21:52</span> · конец <span class="tc">00:22:45</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Какие ошибки совершают 99 % психологов? Вот первая ошибка – это создание сайта</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Сейчас вам не нужно никому платить деньги, нанимать программистов</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Слышите?»</li>
+<li>«Для кого это сейчас осознание, напишите для меня»</li>
+<li>«Вам не нужен сайт» — сказано дважды подряд, оставить один раз</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Первая ошибка начинающего»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Сайт, офис и визитки не нужны — пока нет самой практики, это трата денег и времени.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f12">
+<div class="head"><span class="num">№12</span><span class="name">Три тысячи и триста тысяч</span>
+<button class="btn" onclick="cp(12)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(12,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:25:02</span> · конец <span class="tc">00:25:45</span> · после чистки примерно 35 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Я вкладываю в рекламу 3000 рублей</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">вас никакие 50 тысяч долларов не спасут</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«3000 рублей. У всех есть 3000 рублей на рекламу? У всех» — повтор</li>
+<li>«Для кого это тоже осознание? Ну, кажется, банально сейчас звучит»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Если не работает на три тысячи»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Бюджет не чинит рекламу, которая не работает на малых деньгах.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f13">
+<div class="head"><span class="num">№13</span><span class="name">Одна соцсеть, а не три</span>
+<button class="btn" onclick="cp(13)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(13,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">01:16:38</span> · конец <span class="tc">01:17:20</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Если вы выбираете даже три соцсети, все, вы ничего не сделаете</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">когда вы будете искренне говорить, я еще не профессионал, но я учусь</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Я тоже ее делал»</li>
+<li>«Поймите, это ваша иллюзия»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Одна. Не три»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Распыляться на несколько площадок сразу — верный способ не сделать ничего.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<h2>Резерв — не в работу</h2>
+<div class="reserve">
+
+<section>
+<div class="head"><span class="num">Р1</span><span class="name">Забудьте про конкуренцию</span></div>
+<div class="plain"><span class="tc">00:44:09</span> — <span class="tc">00:44:48</span><br>
+Мысль хорошая: тот, кто не пришёл к вам, чаще всего не пойдёт вообще ни к кому. Но фрагмент опирается на сказанное несколькими минутами раньше, отдельно не читается. Нужна подводка титром, и тогда он теряет темп.</div>
+</section>
+
+<section>
+<div class="head"><span class="num">Р2</span><span class="name">Не зовите сразу — сначала свидание</span></div>
+<div class="plain"><span class="tc">01:00:57</span> — <span class="tc">01:02:37</span><br>
+Сильная мысль про то, что услугу нельзя предлагать в лоб. <b>Но построена на сравнении с приглашением женщины на близость</b> — для аккаунта института тон рискованный. Решает Оля: если оставляем, придётся резать почти всю аналогию, и от фрагмента мало что останется.</div>
+</section>
+
+</div>
+
+<h2>Отклонено и почему</h2>
+<div class="summary">
+<table>
+<tr><td>00:07:20 — 00:13:10</td><td>Расчёт дохода психолога: сколько консультаций, по какой цене, сколько выходит в месяц. Обещание дохода — в публичный контент института не идёт</td></tr>
+<tr><td>00:13:10 — 00:17:00</td><td>Истории студенток с суммами дохода до и после. Обещание дохода плюс персональные данные</td></tr>
+<tr><td>00:50:10 — 00:51:34</td><td>История про консультацию за 1000 долларов и чаевые 3000. То же основание</td></tr>
+<tr><td>01:20:40 — 01:21:30</td><td>Разговор о том, как продавать консультацию за тысячу долларов. То же основание</td></tr>
+<tr><td>01:49:59 и 01:56:42</td><td>Устройство профессии в Америке, названия методов терапии. Узкопрофессионально: без подготовки непонятно, а объяснения внутри фрагмента нет</td></tr>
+</table>
+</div>
+
+<script>
+const KEY='ppk2_1_2026-09-14';
+const TXT={};
+document.querySelectorAll('section[id]').forEach(s=>{
+  const n=s.id.slice(1);
+  let t=s.querySelector('.name').textContent+"\n\n";
+  s.querySelectorAll('.lbl').forEach(l=>{
+    let v=l.nextElementSibling, body='';
+    if(v.tagName==='UL'){ v.querySelectorAll('li').forEach(li=>body+='— '+li.textContent.trim()+"\n"); }
+    else body=v.textContent.trim()+"\n";
+    t+=l.textContent.trim()+"\n"+body+"\n";
+  });
+  TXT[n]=t.trim();
+});
+function cp(n){
+  navigator.clipboard.writeText(TXT[n]).then(()=>{
+    const b=document.querySelector('#f'+n+' .btn'); const o=b.textContent;
+    b.textContent='скопировано'; setTimeout(()=>b.textContent=o,1400);
+  });
+}
+function mk(n,el){
+  const s=document.getElementById('f'+n);
+  s.classList.toggle('done',el.checked);
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  d[n]=el.checked; try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}
+}
+(function(){
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  Object.keys(d).forEach(n=>{
+    const s=document.getElementById('f'+n); if(!s||!d[n])return;
+    s.querySelector('input').checked=true; s.classList.add('done');
+  });
+})();
+</script>
+
+</div>
+</body>
+</html>

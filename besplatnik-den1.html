@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Нарезка — бесплатник, день 1</title>
+<style>
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e0dedb;--bg:#fbfaf8;--card:#fff;--acc:#8B2942;--ok:#3f7d5a;--warn:#a8621b;--cta:#2f6b8f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif;padding:24px 16px 80px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.summary{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:4px;padding:14px 18px;margin-bottom:14px}
+.summary table{border-collapse:collapse;width:100%;font-size:.88rem}
+.summary td{padding:3px 0;vertical-align:top}
+.summary td:first-child{color:var(--muted);width:36%;padding-right:12px}
+.note{background:#fff8ef;border:1px solid #f0dcc0;border-radius:4px;padding:12px 16px;font-size:.88rem;margin-bottom:26px}
+.note b{color:var(--warn)}
+section{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px;margin-bottom:16px}
+section.cta{border-left:3px solid var(--cta)}
+section.done{opacity:.45}
+.head{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.num{font:700 1.05rem/1.3 "Segoe UI",sans-serif;color:var(--acc);white-space:nowrap}
+.name{font-weight:600;font-size:1.05rem;flex:1;min-width:200px}
+.type{font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:3px;white-space:nowrap}
+.type.c{background:#f0efec;color:var(--muted)}
+.type.p{background:#e6f0f6;color:var(--cta)}
+.btn{border:1px solid var(--line);background:#fff;border-radius:4px;padding:4px 10px;font-size:.78rem;cursor:pointer;color:var(--muted);white-space:nowrap}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.chk{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.lbl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 5px;font-weight:600}
+.tc{font-family:"Cascadia Mono",Consolas,monospace;font-size:1rem;background:#f3f1ee;padding:2px 7px;border-radius:3px}
+.q{font-family:"Cascadia Mono",Consolas,monospace;font-size:.95rem;background:#f6f4f1;border-left:2px solid var(--ok);padding:9px 13px;border-radius:0 3px 3px 0;white-space:pre-wrap}
+.cap{font-family:"Cascadia Mono",Consolas,monospace;font-size:.93rem;background:#eef5f9;border-left:2px solid var(--cta);padding:11px 14px;border-radius:0 3px 3px 0;white-space:pre-wrap}
+ul{margin:0;padding-left:0;list-style:none}
+li{padding-left:16px;position:relative;margin-bottom:5px;font-family:"Cascadia Mono",Consolas,monospace;font-size:.9rem}
+li:before{content:"—";position:absolute;left:0;color:var(--muted)}
+.plain{font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:99px;background:#f3e7ea;color:var(--acc)}
+.alarm{background:#fdeeee;border:1px solid #f2cdcd;border-radius:3px;padding:8px 12px;font-size:.9rem;margin-top:6px}
+h2{font-size:1.1rem;margin:34px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+.reserve section{background:#faf9f7;border-style:dashed}
+@media print{.btn,.chk{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Нарезка: бесплатный курс, день 1</h1>
+<div class="sub">Запись 2 часа 3 минуты · разобрано 14 сентября 2026</div>
+
+<div class="summary">
+<table>
+<tr><td>Источник</td><td>«день 1», Kinescope, запись 02:03:38</td></tr>
+<tr><td>Таймкоды</td><td><b>точные</b> — субтитры Kinescope, не оценка</td></tr>
+<tr><td>Отсечено</td><td>вступление и знакомство ~11 мин · истории выпускниц ~9 мин · условия поступления ~14 мин · ответы на вопросы ~8 мин</td></tr>
+<tr><td>Рассмотрено кусков</td><td>22</td></tr>
+<tr><td>Годных</td><td>13 · в резерве 2 · отклонено 7</td></tr>
+<tr><td>С призывом</td><td><b>2</b> — №1 и №2. Норма на неделю</td></tr>
+<tr><td>Первыми в работу</td><td>№1, №2, №3, №4</td></tr>
+</table>
+</div>
+
+<div class="note">
+<b>Как пользоваться.</b> Ищи фрагмент по первой фразе — она дословная, копируется кнопкой. Таймкоды точные, можно идти сразу на них. Отмечай сделанное галочкой.<br><br>
+<b>Пометка ПРИЗЫВ на монтаж не влияет.</b> Режется так же, как остальные — ни пауз, ни титров, ни особой концовки. Призыв живёт только в подписи под видео.<br><br>
+<b>Подпись готова, её надо просто скопировать в описание при публикации.</b> Переписывать не нужно.<br>
+<b>Ролики с пометкой ПРИЗЫВ — согласовать с Олей перед публикацией.</b> Остальные публикуются без согласования.
+</div>
+
+<section id="f1" class="cta">
+<div class="head"><span class="num">№1</span><span class="name">Это не ваш голос</span><span class="type p">ПРИЗЫВ</span>
+<button class="btn" onclick="cp(1)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(1,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:53:48</span> · конец <span class="tc">00:55:00</span> · после чистки примерно 55 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">те чувства, которые вы проживаете при ваших неудачах, те слова, которые вы себе говорите внутри «я неудачник», «я неудачница», «это не для меня»</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Вы себя оцениваете голосом своей матери</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«В терминной психологии это называется внутренний родитель» — термин, зрителю не нужен</li>
+<li>«Есть более талантливые люди. "Ой, я какая -то как стыдная тогда"» — обрывок, мешает</li>
+</ul>
+<div class="alarm"><b>Внимание:</b> чуть раньше по записи, на 00:53:10, есть нецензурное слово. В выбранные границы оно не попадает, но при подрезке начала следи, чтобы не зацепить.</div>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Чей это голос внутри» — держать 2 секунды.</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Слова, которыми человек ругает себя при неудаче, обычно не его собственные.</div>
+<div class="lbl">Подпись под видео — для Оли</div>
+<div class="cap">Пиши курс в комментариях — пришлю ссылку в личку.
+
+Почему внутри звучит «у меня не получится» и чей это на самом деле голос —
+разбираем на бесплатном курсе.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f2" class="cta">
+<div class="head"><span class="num">№2</span><span class="name">Какая мать хуже</span><span class="type p">ПРИЗЫВ</span>
+<button class="btn" onclick="cp(2)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(2,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:36:40</span> · конец <span class="tc">00:38:13</span> · после чистки примерно 60 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Отсутствующая мать, игнорирующая. То есть это мать, которая... Ей не до ребенка</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Жить бессмысленно, я не важен, чувствую внутри пустоту</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Напишите, пожалуйста, в комментариях цифру. Что хуже? Негативная цифра 2, либо игнорирующая цифра 1?»</li>
+<li>«Есть, я вижу, опытные люди, которые понимают. Видите, оценки 50 на 50»</li>
+<li>«И инсайд в том для многих из вас будет» — оставить только «для ребёнка хуже игнорирующая»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо. Вопрос в начале, ответ в конце — так и держим.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Что хуже для ребёнка?» · держать до момента ответа, потом убрать.</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Игнор для ребёнка тяжелее, чем крик: когда реакции нет вообще, он делает вывод, что его нет.</div>
+<div class="lbl">Подпись под видео — для Оли</div>
+<div class="cap">Пиши курс в комментариях — пришлю ссылку в личку.
+
+Что для ребёнка хуже — когда на него кричат или когда его не замечают —
+разбираем на бесплатном курсе.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f3">
+<div class="head"><span class="num">№3</span><span class="name">Почему женщина выносит мозг</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(3)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(3,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:38:58</span> · конец <span class="tc">00:39:45</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Это почему женщина выносит мозг мужчине</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Но зато хоть так я пойму, что я ему важна</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«И именно поэтому, вот сейчас у вас будет большой инсайт, женщины, дорогие девушки и женщины»</li>
+<li>«Кажется, а зачем эта агрессия? Лучше же без агрессии» — тормозит</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Зачем скандал на пустом месте»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Плохая реакция от близкого переносится легче, чем никакой.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f4">
+<div class="head"><span class="num">№4</span><span class="name">Абьюзер боится, что его бросят</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(4)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(4,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:45:30</span> · конец <span class="tc">00:46:45</span> · после чистки примерно 55 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Кто такой абьюзер? Это ужасный человек, который подавляет. А вы понимаете, в чем травма абьюзера?</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">И тогда я не столкнусь со своей травмой, которую я пережил в детстве</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Классно? У кого инсайд? Или вы все знали, ничего нового, да?»</li>
+<li>«Не-не-не-не. Нет, наоборот» — оговорка</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «В чём травма абьюзера»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Подавляет не от силы, а от страха, что уйдут.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f5">
+<div class="head"><span class="num">№5</span><span class="name">Почему вокруг одни женатые</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(5)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(5,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">01:13:43</span> · конец <span class="tc">01:14:40</span> · после чистки примерно 50 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Я, получается, папа, женатый мужчина, больше всего любил не жену свою, а девочку другую</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">А вот что вокруг одни женатые?</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Вдумайтесь в сценарий»</li>
+<li>«Понимаете?»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В конце: «Почему вокруг одни женатые»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Если в детстве отец любил дочь больше жены, у неё складывается: стать женой — значит перестать быть любимой.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f6">
+<div class="head"><span class="num">№6</span><span class="name">Скажите вслух: «Я есть»</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(6)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(6,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:33:50</span> · конец <span class="tc">00:34:40</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Сделайте вдох-выдох, закройте глаза и скажите вслух «Я есть»</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">я тут в сторонке стою и жду свой поезд</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Какие ощущения у вас внутри, когда вы это говорите?» — повтор предыдущей фразы</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Скажи вслух и прислушайся»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Короткое упражнение, по реакции на которое видно, закрыта ли базовая потребность.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f7">
+<div class="head"><span class="num">№7</span><span class="name">Сын воровал деньги у обеспеченного отца</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(7)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(7,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:39:45</span> · конец <span class="tc">00:40:55</span> · после чистки примерно 55 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">вот его сын, обеспеченная семья, у него сын и сын воруют деньги</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Ребенок предпочтет, чаще всего предпочтет негативную реакцию, чем никакую</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Ко мне товарищ рассказал историю» — начать сразу с ситуации</li>
+<li>«Что выяснилось, когда мы проработали этот вопрос?»</li>
+<li>«подсознательно, подсознательно, услышите» — оставить один раз</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Зачем ребёнку воровать, если всё купят»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Ребёнок готов на наказание, лишь бы его заметили.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f8">
+<div class="head"><span class="num">№8</span><span class="name">Мамина дочка</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(8)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(8,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">01:08:40</span> · конец <span class="tc">01:09:30</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">вы же не слышали такого сценария как мамина дочка, но это еще более часто чем маменькин сынок</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Ей там 30, этой дочке, а ощущает она себя</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«да» — повторяется пять раз подряд в конце, оставить речь без них</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Про маменькиного сынка слышали. А про маминых дочек?»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Два зеркальных сценария: инфантильная мать растит рано повзрослевшую дочь, строгая — вечно маленькую.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f9">
+<div class="head"><span class="num">№9</span><span class="name">«Мне муж не уделяет внимания»</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(9)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(9,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:42:35</span> · конец <span class="tc">00:43:20</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Женщины на что жалуются? Мне не уделяет муж внимания</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">мы обнаружим, что женщине не хватало того самого внимания от родителя</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«вот это на втором модуле института подробнее мы эту тему разбираем» — про программу, в публикацию не идёт</li>
+<li>«Психолог, привет, расскажи мне, я тебе заплатил 5 тысяч» — про деньги, лишнее</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Почему "займись собой" не работает»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Жалоба на партнёра почти никогда не про партнёра.</div>
+<div class="lbl">Тег</div><span class="tag">ППК</span>
+</section>
+
+<section id="f10">
+<div class="head"><span class="num">№10</span><span class="name">Родители болеют, чтобы им позвонили</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(10)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(10,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:41:00</span> · конец <span class="tc">00:41:50</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">часто бывает как за хорошие оценки ребенка никак не поощряют, а если плохо учится — уделяют внимание</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Это бессознательные процессы психики</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Но они это делают, опять же, бессознательно. Они не говорят, так, сегодня план заболеть» — шутка ломает тон</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Здоров — не замечают. Заболел — крутятся рядом»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Один и тот же механизм работает у детей и у пожилых родителей.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f11">
+<div class="head"><span class="num">№11</span><span class="name">Лучше одному, чем в отношениях</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(11)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(11,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:48:06</span> · конец <span class="tc">00:48:50</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">отношения это больно и лучше быть одному, одной</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">то есть они вместо отношений выбирают интеллект</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«знаете таких людей? то есть почему так»</li>
+<li>«контрзависимость» — термин, в кадре не нужен</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Первый человек в отношениях — не бывший»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Уход в работу вместо отношений часто начинается с матери, а не с неудачного романа.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f12">
+<div class="head"><span class="num">№12</span><span class="name">Лучшее, что может сделать отец</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(12)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(12,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:51:15</span> · конец <span class="tc">00:52:05</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">самое лучшее, что может сделать папа, это не быть второй мамой</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">когда женщина пытается из мужа сделать вторую маму</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«И заметьте, я сейчас не назвал ни разу слово "папа". Вы замечаете это?»</li>
+<li>«Слышите меня?»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Что на самом деле должен отец»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Задача отца в первые годы — не дублировать мать, а сделать так, чтобы у неё были силы.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f13">
+<div class="head"><span class="num">№13</span><span class="name">Мама так любила, что ничего не могу</span><span class="type c">КОНТЕНТ</span>
+<button class="btn" onclick="cp(13)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(13,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div class="plain">Начало <span class="tc">00:56:55</span> · конец <span class="tc">00:57:50</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Чересчур любящая мать. Которая говорит, ой-ой-ой, я тебя так люблю, не ходи туда, там опасно</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">мне мама не позволила сталкиваться с трудностями этого мира</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Только без мамы ни хера не могу» — <b>нецензурно, вырезать обязательно</b></li>
+<li>«Я готов быть только у мамы под сисечкой» — вульгарно, не для аккаунта института</li>
+<li>«процессировать, процессировать» — повтор и термин</li>
+</ul>
+<div class="alarm"><b>Внимание:</b> в этом фрагменте два места, которые надо вырезать не ради темпа, а обязательно. Смотри список выше.</div>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Когда любви было слишком много»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Гиперопека оставляет человека без опыта справляться самому.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<h2>Резерв — не в работу</h2>
+<div class="reserve">
+<section>
+<div class="head"><span class="num">Р1</span><span class="name">В этом возрасте невозможно залюбить</span></div>
+<div class="plain"><span class="tc">00:31:50</span> — <span class="tc">00:32:40</span><br>
+Контринтуитивно и полезно: до полутора лет ребёнок и должен быть «центром вселенной», избаловать невозможно. Но мысль держится на слове «нарцисс», которое без объяснения звучит как диагноз. Либо резать длиннее и брать объяснение, либо не брать.</div>
+</section>
+<section>
+<div class="head"><span class="num">Р2</span><span class="name">Разбитая коленка</span></div>
+<div class="plain"><span class="tc">00:52:55</span> — <span class="tc">00:53:45</span><br>
+Сильная сцена, из которой растёт фрагмент №1. Но в ней дважды нецензурное слово, и вырезать их, не порвав фразу, не получается. Взяли продолжение сцены, где вывод уже сформулирован — это и есть №1.</div>
+</section>
+</div>
+
+<h2>Отклонено и почему</h2>
+<div class="summary">
+<table>
+<tr><td>00:00 — 00:11</td><td>Приветствие, перекличка, договорённости про комментарии, представление спикера</td></tr>
+<tr><td>00:15:19 — 00:25</td><td>Вопросы «подходит ли вам профессия». Тема в бесплатнике есть, но подача — перечисление без механизма, узнавания не даёт</td></tr>
+<tr><td>00:46:39 — 00:47:30</td><td>История Маргариты: восемь лет избиений, кредит на обучение. Персональная история плюс мотив «взяла кредит» — в публикацию не идёт</td></tr>
+<tr><td>01:23:51 — 01:30</td><td>Истории выпускниц с суммами дохода. Обещания дохода и персональные данные</td></tr>
+<tr><td>01:30:57 — 01:47</td><td>Условия поступления, подарки, цены, рассрочка</td></tr>
+<tr><td>01:47:23 — 01:55</td><td>Критерии выбора института. Продающий слой</td></tr>
+<tr><td>01:55:26 — конец</td><td>Ответы на вопросы, финальный призыв оставить заявку</td></tr>
+</table>
+</div>
+
+<script>
+const KEY='besplatnik_d1_2026-09-14';
+const TXT={};
+document.querySelectorAll('section[id]').forEach(s=>{
+  const n=s.id.slice(1);
+  let t=s.querySelector('.name').textContent+"\n\n";
+  s.querySelectorAll('.lbl').forEach(l=>{
+    let v=l.nextElementSibling, body='';
+    if(v.tagName==='UL'){ v.querySelectorAll('li').forEach(li=>body+='— '+li.textContent.trim()+"\n"); }
+    else body=v.textContent.trim()+"\n";
+    t+=l.textContent.trim()+"\n"+body+"\n";
+  });
+  TXT[n]=t.trim();
+});
+function cp(n){
+  navigator.clipboard.writeText(TXT[n]).then(()=>{
+    const b=document.querySelector('#f'+n+' .btn'); const o=b.textContent;
+    b.textContent='скопировано'; setTimeout(()=>b.textContent=o,1400);
+  });
+}
+function mk(n,el){
+  const s=document.getElementById('f'+n);
+  s.classList.toggle('done',el.checked);
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  d[n]=el.checked; try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}
+}
+(function(){
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  Object.keys(d).forEach(n=>{
+    const s=document.getElementById('f'+n); if(!s||!d[n])return;
+    s.querySelector('input').checked=true; s.classList.add('done');
+  });
+})();
+</script>
+
+</div>
+</body>
+</html>

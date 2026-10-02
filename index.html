@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ТЗ на нарезку рилсов — Инстаграм ОИПП</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,600&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap">
+<style>
+:root{
+  --bg:#f1f3f2; --surface:#fff; --surface-2:#e7ebe9; --line:#d5dcd9;
+  --ink:#15201d; --ink-2:#44524e; --muted:#6b7a75; --accent:#1d4a52;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  --body:"Golos Text",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --display:"Literata",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1514; --surface:#16201e; --surface-2:#1d2927; --line:#2b3835;
+  --ink:#e6eeeb; --ink-2:#c0ccc8; --muted:#8c9a96; --accent:#63bec4;
+  color-scheme:dark;
+}}
+:root[data-theme="dark"]{
+  --bg:#0e1514; --surface:#16201e; --surface-2:#1d2927; --line:#2b3835;
+  --ink:#e6eeeb; --ink-2:#c0ccc8; --muted:#8c9a96; --accent:#63bec4;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding:0 18px 70px}
+header{padding-block:40px 20px;border-bottom:2px solid var(--ink);margin-bottom:24px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 9px}
+h1{font-family:var(--display);font-weight:600;font-size:clamp(25px,4.2vw,34px);line-height:1.12;margin:0 0 8px;text-wrap:balance}
+.sub{margin:0;color:var(--ink-2);max-width:60ch}
+ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:9px}
+li a{
+  display:grid;grid-template-columns:auto 1fr;gap:4px 16px;align-items:baseline;
+  background:var(--surface);border:1px solid var(--line);border-radius:10px;
+  padding:15px 18px;text-decoration:none;color:var(--ink);
+}
+li a:hover{border-color:var(--accent);background:var(--surface-2)}
+li a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.date{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+.t{font-weight:600;font-size:16.5px}
+.src{grid-column:2;color:var(--muted);font-size:13.5px}
+footer{margin-top:28px;color:var(--muted);font-size:13.5px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Инстаграм ОИПП · сентябрь 2026</p>
+    <h1>Технические задания на нарезку рилсов</h1>
+    <p class="sub">Для монтажёра. В каждом задании: какие фрагменты резать, дословные фразы начала и конца, что внутри вода и какую фразу вынести в начало ролика.</p>
+  </header>
+  <ul>
+    <li>
+      <a href="besplatnik-den1.html">
+        <span class="date">14.09.2026</span>
+        <span class="t">Бесплатник, день 1</span>
+        <span class="src">Запись первого дня бесплатного курса</span>
+      </a>
+    </li>
+    <li>
+      <a href="ppk2-1.html">
+        <span class="date">14.09.2026</span>
+        <span class="t">ППК 2.0, занятие 1</span>
+        <span class="src">Лекция программы «Психолог-консультант»</span>
+      </a>
+    </li>
+    <li>
+      <a href="psihosomatika-mak.html">
+        <span class="date">14.09.2026</span>
+        <span class="t">Психосоматика и МАК</span>
+        <span class="src">Вебинар в трёх частях</span>
+      </a>
+    </li>
+    <li>
+      <a href="intensiv2-m1-u1.html">
+        <span class="date">17.09.2026</span>
+        <span class="t">Интенсив 2.0, модуль 1, урок 1</span>
+        <span class="src">Занятие Караберовой</span>
+      </a>
+    </li>
+    <li>
+      <a href="seksologiya-m1-u1.html">
+        <span class="date">22.09.2026</span>
+        <span class="t">Сексология, модуль 1, урок 1</span>
+        <span class="src">Лекция программы по сексологии</span>
+      </a>
+    </li>
+  </ul>
+  <footer>Задания собраны по расшифровкам записей. Тайм-коды и реплики приведены дословно — сверяйтесь с ними при монтаже.</footer>
+</div>
+</body>
+</html>

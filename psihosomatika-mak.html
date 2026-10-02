@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Нарезка — Психосоматика и МАК</title>
+<style>
+:root{--ink:#1a1a1a;--muted:#6b6b6b;--line:#e0dedb;--bg:#fbfaf8;--card:#fff;--acc:#4B7A62;--ok:#3f7d5a;--warn:#a8621b;--cta:#2f6b8f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,-apple-system,sans-serif;padding:24px 16px 80px}
+.wrap{max-width:840px;margin:0 auto}
+h1{font-size:1.5rem;margin:0 0 4px}
+.sub{color:var(--muted);font-size:.9rem;margin-bottom:22px}
+.summary{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:4px;padding:14px 18px;margin-bottom:14px}
+.summary table{border-collapse:collapse;width:100%;font-size:.88rem}
+.summary td{padding:3px 0;vertical-align:top}
+.summary td:first-child{color:var(--muted);width:34%;padding-right:12px}
+.note{background:#fff8ef;border:1px solid #f0dcc0;border-radius:4px;padding:12px 16px;font-size:.88rem;margin-bottom:26px}
+.note b{color:var(--warn)}
+.files{background:#eef3f0;border:1px solid #cfe0d6;border-radius:4px;padding:12px 16px;font-size:.9rem;margin-bottom:22px}
+.files code{font-family:"Cascadia Mono",Consolas,monospace;background:#fff;padding:1px 6px;border-radius:3px}
+section{background:var(--card);border:1px solid var(--line);border-radius:5px;padding:18px 20px;margin-bottom:16px}
+section.done{opacity:.45}
+.head{display:flex;align-items:flex-start;gap:10px;margin-bottom:6px;flex-wrap:wrap}
+.num{font:700 1.05rem/1.3 "Segoe UI",sans-serif;color:var(--acc);white-space:nowrap}
+.name{font-weight:600;font-size:1.05rem;flex:1;min-width:200px}
+.type{font-size:.7rem;font-weight:700;letter-spacing:.08em;padding:3px 9px;border-radius:3px;white-space:nowrap;background:#f0efec;color:var(--muted)}
+.btn{border:1px solid var(--line);background:#fff;border-radius:4px;padding:4px 10px;font-size:.78rem;cursor:pointer;color:var(--muted);white-space:nowrap}
+.btn:hover{border-color:var(--acc);color:var(--acc)}
+.chk{display:flex;align-items:center;gap:6px;font-size:.8rem;color:var(--muted);white-space:nowrap}
+.lbl{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:14px 0 5px;font-weight:600}
+.file{display:inline-block;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:3px;background:#e4efe8;color:#2f5f47;margin-bottom:4px}
+.tc{font-family:"Cascadia Mono",Consolas,monospace;font-size:1rem;background:#f3f1ee;padding:2px 7px;border-radius:3px}
+.q{font-family:"Cascadia Mono",Consolas,monospace;font-size:.95rem;background:#f6f4f1;border-left:2px solid var(--ok);padding:9px 13px;border-radius:0 3px 3px 0;white-space:pre-wrap}
+ul{margin:0;padding-left:0;list-style:none}
+li{padding-left:16px;position:relative;margin-bottom:5px;font-family:"Cascadia Mono",Consolas,monospace;font-size:.9rem}
+li:before{content:"—";position:absolute;left:0;color:var(--muted)}
+.plain{font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:99px;background:#e9f0eb;color:var(--acc)}
+.alarm{background:#fdeeee;border:1px solid #f2cdcd;border-radius:3px;padding:8px 12px;font-size:.9rem;margin-top:6px}
+.star{color:#b8860b;font-size:.8rem;font-weight:700}
+h2{font-size:1.1rem;margin:34px 0 12px;padding-top:10px;border-top:1px solid var(--line)}
+@media print{.btn,.chk{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<h1>Нарезка: Психосоматика и МАК</h1>
+<div class="sub">Три части, 87 минут суммарно · разобрано 14 сентября 2026</div>
+
+<div class="files">
+<b>Три отдельных файла, у каждого свой отсчёт времени с нуля.</b><br>
+В каждом фрагменте ниже указано, в каком файле искать. Не перепутать.<br><br>
+<code>Часть 1 Психосоматика и МАК</code> — 34 мин · теория<br>
+<code>Часть 2 Психосоматика и МАК</code> — 26 мин · практикум<br>
+<code>Часть 3 Психосоматика и МАК</code> — 27 мин · теория и техники
+</div>
+
+<div class="summary">
+<table>
+<tr><td>Таймкоды</td><td><b>точные</b> — субтитры Kinescope. У каждой части свой отсчёт</td></tr>
+<tr><td>Отсечено</td><td>практикум и алгоритмы консультации ~38 мин · реклама авторских колод ~4 мин · медицинские утверждения ~9 мин</td></tr>
+<tr><td>Рассмотрено кусков</td><td>18</td></tr>
+<tr><td>Годных</td><td>10 · отклонено 8</td></tr>
+<tr><td>С призывом</td><td><b>ноль</b> — темы нет в бесплатнике, см. примечание ниже</td></tr>
+<tr><td>Первыми в работу</td><td>№1, №2, №3, №4</td></tr>
+</table>
+</div>
+
+<div class="note">
+<b>Все фрагменты контентные, призывных нет.</b> Бесплатный курс психосоматику и работу с телом не разбирает — он про детство, сценарии отношений и работу психолога. Позвать роликом про тело на такой вебинар значит пообещать то, чего там не будет.<br><br>
+<b>Как пользоваться.</b> Сначала посмотри, в каком файле искать. Дальше — по первой фразе, она дословная, копируется кнопкой. Отмечай сделанное галочкой.
+</div>
+
+<section id="f1">
+<div class="head"><span class="num">№1</span><span class="name">Симптом — это друг <span class="star">★ сильнейший</span></span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(1)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(1,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 3</span></div>
+<div class="plain">Начало <span class="tc">00:10:28</span> · конец <span class="tc">00:11:32</span> · после чистки примерно 50 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">любой симптом это друг</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Ты пока будешь на больничном лежать, поищи себе другую работу</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«На сути это друг» — оговорка, повтор предыдущей фразы</li>
+<li>«не знаю, мигрень» — оставить «давай мы тебе включим мигрень»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «А если болезнь на вашей стороне?»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Симптом сравнивается с человеком, который выносит бутылки у алкоголика: мешает, но защищает.</div>
+<div class="lbl">Тег</div><span class="tag">ГЕШТ</span>
+</section>
+
+<section id="f2">
+<div class="head"><span class="num">№2</span><span class="name">Народ не просто так придумал</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(2)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(2,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 1</span></div>
+<div class="plain">Начало <span class="tc">00:22:58</span> · конец <span class="tc">00:24:01</span> · после чистки примерно 50 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">У нас есть четкие устойчивые фразы и выражения, которые мы употребляем</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">И народ их не просто так придумал</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Понятно здесь, да?»</li>
+<li>«И тогда будет мишенью психосоматики это сердце» — термин, зрителю не нужен</li>
+<li>«Про глаза мы тоже сказали» — отсылка к тому, чего в ролике нет</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи. Если фрагмент выходит длинным — оставить блок про сердце и про руки, блок про голову убрать.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Сердце в пятки. Руки крюки. Ноги подгибаются»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Народные выражения про тело появились не случайно — они описывают реальные телесные реакции.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f3">
+<div class="head"><span class="num">№3</span><span class="name">Тело сигналило, а мы не слушали</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(3)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(3,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 1</span></div>
+<div class="plain">Начало <span class="tc">00:24:40</span> · конец <span class="tc">00:25:51</span> · после чистки примерно 50 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">мы можем долго не давать себе отдых, режим нон-стоп</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Вот это прям тело нам сигнализирует</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Ну, условно, наслаждаемся, потому что мы отдыхаем, с одной стороны»</li>
+<li>«попей-ка витаминчики, попей чайку мне, вкусняшек всяких, диетическое питание» — перечисление затягивает</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Сначала заломило. Потом закололо. Потом — неделя лёжа»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Простуда часто приходит после того, как несколько раз проигнорировали усталость.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f4">
+<div class="head"><span class="num">№4</span><span class="name">Где в теле живут эмоции</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(4)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(4,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 3</span></div>
+<div class="plain">Начало <span class="tc">00:15:38</span> · конец <span class="tc">00:16:51</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Радость, как правило, это бывает в груди</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Обида – это коктейль эмоций</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li><b>Все названия гормонов:</b> серотонин, эндорфины, дофамин, мелатонин, окситоцин, вазопрессин. Зрителю без подготовки они не нужны и сбивают</li>
+<li>«Также может быть в груди, но оно более локализованное» — слово «локализованное» убрать</li>
+</ul>
+<div class="alarm"><b>Внимание:</b> без вырезания гормонов фрагмент не годится — он превращается в лекцию для студентов. Оставляем только «где именно в теле».</div>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Куда попадает обида»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Радость в груди, печаль давит там же, обида сосёт под ложечкой — у каждой эмоции своё место.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f5">
+<div class="head"><span class="num">№5</span><span class="name">Тело знает только «да» и «нет»</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(5)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(5,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 1</span></div>
+<div class="plain">Начало <span class="tc">00:02:22</span> · конец <span class="tc">00:04:00</span> · после чистки примерно 55 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">вспомним, когда вы находитесь где-то в большой толпе людей</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">или я остаюсь, или я ухожу</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Понятно будут нюансы, но при этом есть какая -то дистанция»</li>
+<li>«так как все у нас в мире дуально, день-ночь, черное-белое» — отвлекает</li>
+<li>«две полярности» — термин, оставить «две реакции»</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Вспомни толкучку в метро»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">У тела всего две реакции — остаться или уйти, и оно даёт их раньше, чем человек успевает подумать.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f6">
+<div class="head"><span class="num">№6</span><span class="name">«Я его не перевариваю»</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(6)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(6,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 2</span></div>
+<div class="plain">Начало <span class="tc">00:12:05</span> · конец <span class="tc">00:12:55</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Что тогда произошло в вашей жизни?</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">И меня это раздражает, не могу это переварить</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Ну, не конкретно прямо тогда, хотя может быть, острая такая реакция» — оговорка</li>
+<li>«Мы смотрим чуть -чуть подальше»</li>
+<li>«Ну, вот вам, пожалуйста» — в конце не нужно</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Живот заболел через полтора месяца после переезда»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Симптом появляется не в момент события, а через месяц-полтора — искать причину надо раньше.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f7">
+<div class="head"><span class="num">№7</span><span class="name">Болезни запрещённой радости</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(7)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(7,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 3</span></div>
+<div class="plain">Начало <span class="tc">00:09:21</span> · конец <span class="tc">00:09:55</span> · после чистки примерно 30 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Болезни запрещенной радости. А если вы не знали, то есть такие болезни</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">не кричи, что ты бегаешь, прыгаешь от радости</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li><b>Обязательно:</b> всё перечисление диагнозов — «артерии», «анемия», «гипотония», «гипертония». Это медицинские утверждения, в публикацию не идут</li>
+</ul>
+<div class="alarm"><b>Внимание:</b> фрагмент берём только до перечисления болезней. Сама мысль — про запрет радоваться в детстве — самодостаточна.</div>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Не кричи. Не прыгай. Что ты разошёлся»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Запрет на радость в детстве не проходит бесследно.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f8">
+<div class="head"><span class="num">№8</span><span class="name">«Я пугаюсь, когда ты повышаешь голос»</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(8)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(8,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 3</span></div>
+<div class="plain">Начало <span class="tc">00:04:35</span> · конец <span class="tc">00:05:25</span> · после чистки примерно 40 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Я пугаюсь, когда повышают голос</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">я могу остаться одинокой</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«трёхчастное высказывание» — термин, вырезать оба упоминания</li>
+<li>«Понятно здесь. Связочка такая. Еще раз» — оговорка с возвратом</li>
+<li>«Типировать страх чего конкретно?» — слово «типировать» зрителю непонятно</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Как сказать про страх, чтобы услышали»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Готовая формула: что я чувствую, когда ты делаешь вот это, и что это для меня значит.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f9">
+<div class="head"><span class="num">№9</span><span class="name">Прожить худшее в голове</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(9)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(9,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 1</span></div>
+<div class="plain">Начало <span class="tc">00:32:17</span> · конец <span class="tc">00:33:11</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Все случилось самое плохое, неизвестность, все разрушилось, вообще ничего не понятно</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">действительно снижается уровень тревожности</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«кстати, очень классная и крутая техника» — самооценка приёма, лишнее</li>
+<li>«уже начинается рационализация» — термин</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи, переставлять не надо.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «А если оно уже случилось?»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Если прожить худший сценарий до конца в воображении, тревога спадает.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<section id="f10">
+<div class="head"><span class="num">№10</span><span class="name">Вернуться в тело</span><span class="type">КОНТЕНТ</span>
+<button class="btn" onclick="cp(10)">скопировать</button>
+<label class="chk"><input type="checkbox" onchange="mk(10,this)"> готово</label></div>
+<div class="lbl">Где искать</div>
+<div><span class="file">ЧАСТЬ 1</span></div>
+<div class="plain">Начало <span class="tc">00:33:11</span> · конец <span class="tc">00:34:19</span> · после чистки примерно 45 секунд</div>
+<div class="lbl">Первая фраза</div>
+<div class="q">Очень важно идти в свой страх. Очень важно заземляться</div>
+<div class="lbl">Последняя фраза</div>
+<div class="q">Это все возвращает нас в тело</div>
+<div class="lbl">Вырезать внутри</div>
+<ul>
+<li>«Это снижает уровень адреналина в крови» — медицинское утверждение, убрать</li>
+<li>«телесное центрирование» — термин, оставить само действие</li>
+</ul>
+<div class="lbl">Порядок склейки</div>
+<div class="plain">Идёт как в записи. Запись обрывается сразу после — дальше не тянуть.</div>
+<div class="lbl">Текст на экране</div>
+<div class="plain">В начале: «Три вещи, когда накрывает»</div>
+<div class="lbl">О чём это</div>
+<div class="plain">Вода, дыхание, стопы на полу — простые действия, чтобы вернуться в себя.</div>
+<div class="lbl">Тег</div><span class="tag">ОБЩ</span>
+</section>
+
+<h2>Отклонено и почему</h2>
+<div class="summary">
+<table>
+<tr><td><b>ЧАСТЬ 2</b>, 00:00 — 00:03:28</td><td>Продвижение авторских колод преподавателя: «Тело как история», «Дом моей души», «Тело чувств», «Хлеб насущный», «Спящие в тучках», с призывом приобрести. Продающий слой и к тому же не продукт института</td></tr>
+<tr><td><b>ЧАСТЬ 2</b>, 00:03:28 — конец</td><td>Практикум целиком: алгоритмы раскладов, списки вопросов клиенту, порядок работы с картами. Инструкция для практика, в публичный контент не идёт</td></tr>
+<tr><td><b>ЧАСТЬ 1</b>, 00:09:47 — 00:12:50</td><td>Классификация психосоматических заболеваний, «психосоматическая семёрка», алекситимия. Сплошные термины без объяснения</td></tr>
+<tr><td><b>ЧАСТЬ 1</b>, 00:12:50 — 00:19:00</td><td>Конверсионный синдром, психосоматозы, функциональные синдромы. То же самое</td></tr>
+<tr><td><b>ЧАСТЬ 3</b>, 00:00 — 00:03:18</td><td>Алгоритм признаний по методу: «я признаю различие между моей личностью и этим чувством». Техника для практика</td></tr>
+<tr><td><b>ЧАСТЬ 3</b>, 00:05:49 — 00:09:21</td><td>Разбор заболеваний по органам: позвоночник и чувство вины, зубы, гайморит, спайки, аллергия. Медицинские утверждения</td></tr>
+<tr><td><b>ЧАСТЬ 3</b>, 00:12:31 — 00:14:29</td><td>Родовые истории: «у бабушки утопили — у внука хронический бронхит». Утверждения о наследовании болезней через поколения</td></tr>
+<tr><td><b>ЧАСТЬ 3</b>, 00:19:18 — конец</td><td>Виды агрессии, разбор по зубам, подавленная агрессия и диагнозы. Термины плюс медицина</td></tr>
+</table>
+</div>
+
+<script>
+const KEY='psyhosomatika_mak_2026-09-14';
+const TXT={};
+document.querySelectorAll('section[id]').forEach(s=>{
+  const n=s.id.slice(1);
+  let t=s.querySelector('.name').textContent.replace('★ сильнейший','').trim()+"\n\n";
+  s.querySelectorAll('.lbl').forEach(l=>{
+    let v=l.nextElementSibling, body='';
+    while(v && v.classList && v.classList.contains('file')){ body+=v.textContent.trim()+"\n"; v=v.nextElementSibling; }
+    if(v && v.querySelector && v.querySelector('.file')){ body+=v.textContent.trim()+"\n"; v=v.nextElementSibling; }
+    if(!v) return;
+    if(v.tagName==='UL'){ v.querySelectorAll('li').forEach(li=>body+='— '+li.textContent.trim()+"\n"); }
+    else body+=v.textContent.trim()+"\n";
+    t+=l.textContent.trim()+"\n"+body+"\n";
+  });
+  TXT[n]=t.trim();
+});
+function cp(n){
+  navigator.clipboard.writeText(TXT[n]).then(()=>{
+    const b=document.querySelector('#f'+n+' .btn'); const o=b.textContent;
+    b.textContent='скопировано'; setTimeout(()=>b.textContent=o,1400);
+  });
+}
+function mk(n,el){
+  const s=document.getElementById('f'+n);
+  s.classList.toggle('done',el.checked);
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  d[n]=el.checked; try{localStorage.setItem(KEY,JSON.stringify(d))}catch(e){}
+}
+(function(){
+  let d={}; try{d=JSON.parse(localStorage.getItem(KEY)||'{}')}catch(e){}
+  Object.keys(d).forEach(n=>{
+    const s=document.getElementById('f'+n); if(!s||!d[n])return;
+    s.querySelector('input').checked=true; s.classList.add('done');
+  });
+})();
+</script>
+
+</div>
+</body>
+</html>
